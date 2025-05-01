@@ -47,9 +47,10 @@ console.log(account3.withdraw(1500));
 //listTaks() returns an array of all remaining tasks
 
 const taskList={
-   tasks: ["Reading book","Doing laundry","mop floor"],
+   tasks: [],
 
    addTask(task) {
+        
         return `${this.task} added to tasklist`
    }
 }
@@ -92,20 +93,20 @@ console.log(student1.hasPassed());
 //Create a ShoppingCart object with a property items (an array of item objects with name and price). 
 //Add a method addItem(item) to push new items, and a method getTotal() that returns the total cost of all items in the cart. Add 3 items and print the final total.
 
-// const ShoppingCart ={
-//     items: [], 
-//     addItem(item) {
-//         const item={name,price};
-//         this.items.push(item);
-//     }
+const ShoppingCart ={
+    items: [], 
+    addItem(item) {
+        const item={name,price};
+        this.items.push(item);
+    }
     
-// }
-// const cart=new ShoppingCart();{
-//     cart.addItem("toner",350)
-//     cart.addItem("sunscreen",789)
-//     cart.addItem("mascarra",430)
+}
+const cart=new ShoppingCart();{
+    cart.addItem("toner",350)
+    cart.addItem("sunscreen",789)
+    cart.addItem("mascarra",430)
     
-// }
+}
 
 //Create a Movie constructor that takes title, year, and rating. Add a method isClassic() that returns true if the year is before 2000, 
 // and a method recommend() that returns a string like "Highly recommended!" if rating is above 8. Create at least 3 movies and call these methods on each.
