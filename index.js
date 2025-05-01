@@ -92,20 +92,20 @@ console.log(student1.hasPassed());
 //Create a ShoppingCart object with a property items (an array of item objects with name and price). 
 //Add a method addItem(item) to push new items, and a method getTotal() that returns the total cost of all items in the cart. Add 3 items and print the final total.
 
-const ShoppingCart ={
-    items: [], 
-    addItem(item) {
-        const item={name,price};
-        this.items.push(item);
-    }
+// const ShoppingCart ={
+//     items: [], 
+//     addItem(item) {
+//         const item={name,price};
+//         this.items.push(item);
+//     }
     
-}
-const cart=new ShoppingCart();{
-    cart.addItem("toner",350)
-    cart.addItem("sunscreen",789)
-    cart.addItem("mascarra",430)
+// }
+// const cart=new ShoppingCart();{
+//     cart.addItem("toner",350)
+//     cart.addItem("sunscreen",789)
+//     cart.addItem("mascarra",430)
     
-}
+// }
 
 //Create a Movie constructor that takes title, year, and rating. Add a method isClassic() that returns true if the year is before 2000, 
 // and a method recommend() that returns a string like "Highly recommended!" if rating is above 8. Create at least 3 movies and call these methods on each.
@@ -119,10 +119,29 @@ function Movie(title,year,rating){
     this.year=year
     this.rating=rating
     this.isClassic=function(){
-        if(this.year> 2000){
+        if(this.year< 2000){
             return true
         }else{
             return false
         }
     }
+    this.recommend=function(){
+        if(rating > 8){
+            return "Highly recommend"
+        }else{
+            return "Not as interesting" 
+        }
+    }
 }
+const movie1= new Movie("Shawshank Redemption", 1994,9)
+console.log(movie1)
+console.log(movie1.isClassic())
+console.log(movie1.recommend())
+const movie2 = new Movie("Cruella",2021,7)
+console.log(movie2)
+console.log(movie2.isClassic())
+console.log(movie2.recommend())
+const movie3 = new Movie("Red Notice",2024,8)
+console.log(movie3)
+console.log(movie3.isClassic())
+console.log(movie3.recommend())
